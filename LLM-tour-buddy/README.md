@@ -1,62 +1,62 @@
 # LLM Tour Buddy
 
-Bu proje, Türkiye hakkında turistik bilgiler sunan bir yapay zeka sohbet botudur. Streamlit arayüzü ve terminal üzerinden çalışabilen iki farklı versiyonu bulunmaktadır. Proje, LangChain ve Ollama kullanılarak geliştirilmiştir.
+This project is an AI chatbot that provides tourist information about Turkey. It has two different versions that can run via a Streamlit interface and a terminal. The project was developed using LangChain and Ollama.
 
-## Özellikler
+## Features
 
-- **İnteraktif Sohbet Arayüzü:** Streamlit kullanarak kullanıcı dostu bir web arayüzü sunar.
-- **Terminal Desteği:** Komut satırı üzerinden de çalışabilir.
-- **Türkiye Odaklı Bilgiler:** Türkiye'nin tarihi, turistik yerleri, yerel mutfağı ve seyahat ipuçları hakkında bilgi verir.
-- **Konuşma Hafızası:** Sohbet geçmişini hatırlayarak daha tutarlı cevaplar üretir.
+- **Interactive Chat Interface:** Provides a user-friendly web interface using Streamlit.
+- **Terminal Support:** Can also be run via the command line.
+- **Turkey-Focused Information:** Provides information about Turkey's history, tourist attractions, local cuisine, and travel tips.
+- **Conversation Memory:** Remembers the chat history to produce more consistent answers.
 
-## Kurulum
+## Setup
 
-> **Not:** Bu talimatlar, `LLM-Practices` deposunu zaten klonladığınızı ve terminalinizde `LLM-tour-buddy` klasörünün içinde olduğunuzu varsaymaktadır.
+> **Note:** These instructions assume that you have already cloned the `LLM-Practices` repository and you are inside the `LLM-tour-buddy` directory in your terminal.
 
-1.  **Sanal Ortam Oluşturun ve Aktif Edin:**
+1.  **Create and Activate a Virtual Environment:**
     ```bash
     python -m venv venv
-    source venv/bin/activate  # macOS/Linux için
-    # venv\Scripts\activate  # Windows için
+    source venv/bin/activate  # for macOS/Linux
+    # venv\Scripts\activate  # for Windows
     ```
 
-2.  **Gerekli Kütüphaneleri Yükleyin:**
+2.  **Install Required Libraries:**
     ```bash
     pip install -r requirements.txt
     ```
 
-3.  **Ollama Kurulumu:**
-    Bu proje, yerel bir dil modeli (LLM) olan Ollama'yı kullanmaktadır. Eğer sisteminizde Ollama yüklü değilse, [resmi web sitesinden](https://ollama.com/) indirip kurun.
+3.  **Install Ollama:**
+    This project uses Ollama, a local language model (LLM) runner. If you don't have Ollama installed on your system, download and install it from the [official website](https://ollama.com/).
 
-4.  **Dil Modelini İndirin:**
-    Proje `llama3.2:3b` modelini kullanmaktadır. Aşağıdaki komut ile modeli indirebilirsiniz:
+4.  **Download the Language Model:**
+    The project uses the `llama3.2:3b` model. You can download the model with the following command:
     ```bash
     ollama pull llama3.2:3b
     ```
 
-## Kullanım
+## Usage
 
-### Streamlit Arayüzü
+### Streamlit Interface
 
-Web tabanlı arayüzü başlatmak için aşağıdaki komutu çalıştırın:
+To start the web-based interface, run the following command:
 
 ```bash
 streamlit run streamlit_tourist_bot.py
 ```
 
-### Terminal Uygulaması
+### Terminal Application
 
-Terminal üzerinden sohbet botunu çalıştırmak için:
+To run the chatbot via the terminal:
 
 ```bash
 python tourist_bot_terminal.py
 ```
 
-Uygulamadan çıkmak için `quit` yazabilirsiniz.
+You can type `quit` to exit the application.
 
-## Proje Yapısı
+## Project Structure
 
--   `streamlit_tourist_bot.py`: Streamlit arayüzünü içeren ana dosya.
--   `tourist_bot_terminal.py`: Terminal tabanlı sohbet botu.
--   `requirements.txt`: Projenin bağımlılıklarını listeleyen dosya.
--   `README.md`: Bu dosya. 
+-   `streamlit_tourist_bot.py`: The main file containing the Streamlit interface.
+-   `tourist_bot_terminal.py`: The terminal-based chatbot.
+-   `requirements.txt`: The file listing the project's dependencies.
+-   `README.md`: This file. 
