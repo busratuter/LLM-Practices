@@ -70,3 +70,7 @@ def get_events():
 if __name__ == "__main__":
     init_db()
     add_note("completed the ai project")
+    add_event("meeting with the cyber team", "25 temmuz cuma")
+
+    print(f"Notes: {get_notes()}")
+    print(f"Events: {get_events()}")
