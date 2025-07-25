@@ -37,8 +37,11 @@ def get_gemini_response(prompt: str) -> str:
             return f"Error: {e}"
     else:
         return f"Error: {response.status_code} - {response.text}"
-    
+
+#test
 if __name__ == "__main__":
+    
     user_input = input("Enter a prompt: ") 
     response = get_gemini_response(user_input)
+
     print(f"Gemini yaniti: {response}")
